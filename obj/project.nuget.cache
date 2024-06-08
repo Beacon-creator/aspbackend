@@ -1,9 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "Mluhr4Jx1Gk=",
+  "dgSpecHash": "nc0A7JV8Pcc=",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\OneDrive\\Documents\\MobileApps\\Aspbackend\\Aspbackend.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\amazon.lambda.apigatewayevents\\2.7.0\\amazon.lambda.apigatewayevents.2.7.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\amazon.lambda.applicationloadbalancerevents\\2.2.0\\amazon.lambda.applicationloadbalancerevents.2.2.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\amazon.lambda.aspnetcoreserver\\9.0.0\\amazon.lambda.aspnetcoreserver.9.0.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\amazon.lambda.aspnetcoreserver.hosting\\1.7.0\\amazon.lambda.aspnetcoreserver.hosting.1.7.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\amazon.lambda.core\\2.2.0\\amazon.lambda.core.2.2.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\amazon.lambda.logging.aspnetcore\\3.1.0\\amazon.lambda.logging.aspnetcore.3.1.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\amazon.lambda.runtimesupport\\1.10.0\\amazon.lambda.runtimesupport.1.10.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\amazon.lambda.serialization.systemtextjson\\2.4.1\\amazon.lambda.serialization.systemtextjson.2.4.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
