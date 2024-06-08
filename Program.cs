@@ -9,6 +9,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddAWSLambdaHosting(LambdaEventSource.HttpApi);
 
 //adding dbcontext from appsettings.json
 builder.Services.AddDbContext<AppDbContext>(options =>
