@@ -23,3 +23,11 @@ Content-Type: application/json
 GET {{Aspbackend_HostAddress}}/api/user/bose@email.com/bose22
 
 ###
+
+GET {{Aspbackend_HostAddress}}/api/user/string/string
+
+###
+
+GET {{Aspbackend_HostAddress}}/weatherforecast
+
+###

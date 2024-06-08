@@ -258,3 +258,4 @@ C:\Users\user\OneDrive\Documents\MobileApps\Aspbackend\bin\Debug\net8.0\runtimes
 C:\Users\user\OneDrive\Documents\MobileApps\Aspbackend\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 C:\Users\user\OneDrive\Documents\MobileApps\Aspbackend\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\user\OneDrive\Documents\MobileApps\Aspbackend\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+C:\Users\user\OneDrive\Documents\MobileApps\Aspbackend\obj\Debug\net8.0\Aspbackend.sourcelink.json
