@@ -1,30 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\user\\OneDrive\\Documents\\MobileApps\\Aspbackend\\",
+  "WorkspaceRootPath": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|c:\\users\\user\\onedrive\\documents\\mobileapps\\aspbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|c:\\users\\user\\onedrive\\documents\\mobileapps\\aspbackend\\aspbackend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|solutionrelative:aspbackend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|c:\\users\\user\\onedrive\\documents\\mobileapps\\aspbackend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|c:\\users\\user\\onedrive\\documents\\backendasp\\aspbackend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|c:\\users\\user\\onedrive\\documents\\mobileapps\\aspbackend\\aspbackend.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|solutionrelative:aspbackend.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|c:\\users\\user\\onedrive\\documents\\mobileapps\\aspbackend\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|c:\\users\\user\\onedrive\\documents\\mobileapps\\aspbackend\\data\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|solutionrelative:data\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|c:\\users\\user\\onedrive\\documents\\backendasp\\aspbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,85 +50,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Aspbackend.csproj",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Documents\\MobileApps\\Aspbackend\\Aspbackend.csproj",
-              "RelativeDocumentMoniker": "Aspbackend.csproj",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\Documents\\MobileApps\\Aspbackend\\Aspbackend.csproj",
-              "RelativeToolTip": "Aspbackend.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-06-08T09:41:15.048Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Aspbackend.http",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Documents\\MobileApps\\Aspbackend\\Aspbackend.http",
-              "RelativeDocumentMoniker": "Aspbackend.http",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\Documents\\MobileApps\\Aspbackend\\Aspbackend.http",
-              "RelativeToolTip": "Aspbackend.http",
-              "ViewState": "AQIAABAAAAAAAAAAAAAQwB8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2024-06-07T13:07:11.251Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AppDbContextModelSnapshot.cs",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Documents\\MobileApps\\Aspbackend\\Data\\Migrations\\AppDbContextModelSnapshot.cs",
-              "RelativeDocumentMoniker": "Data\\Migrations\\AppDbContextModelSnapshot.cs",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\Documents\\MobileApps\\Aspbackend\\Data\\Migrations\\AppDbContextModelSnapshot.cs",
-              "RelativeToolTip": "Data\\Migrations\\AppDbContextModelSnapshot.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-07T12:21:53.319Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Documents\\MobileApps\\Aspbackend\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\Documents\\MobileApps\\Aspbackend\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "Data\\AppDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-07T11:53:49.927Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Documents\\MobileApps\\Aspbackend\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\Documents\\MobileApps\\Aspbackend\\Program.cs*",
-              "RelativeToolTip": "Program.cs*",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAAAB8AAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-07T11:52:56.286Z",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-13T17:55:48.387Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Documents\\MobileApps\\Aspbackend\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\Documents\\MobileApps\\Aspbackend\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-07T11:52:47.053Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:3:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T17:55:43.923Z"
             }
           ]
         },
