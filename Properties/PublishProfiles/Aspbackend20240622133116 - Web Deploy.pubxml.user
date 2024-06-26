@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAhatnHsgGP0eLS6yd2z/nGAAAAAACAAAAAAAQZgAAAAEAACAAAAA1a5FoGqef/ZvxItnook7GCDV3NEpzyxMvup4iypMcpAAAAAAOgAAAAAIAACAAAACff3FRc9PQ99WPkP5t7J6zM3TnfQxNNjyplB/BKVn0m4AAAACg6WoKEKeNMCkeyttoM6gcU0/BiSVI4PYmFi0VZATHz01l/I2jlYrblJHSbGl6NpWC8U4yMKl7u2jDuNgyjauts1/X+D1qxTh7lGQm+0kHc1tXpPZ8sFWan/E4X2EQrZJ/bUh3uKBv7BflB9gjXDlGVwoSSut6YCGEsMFEPLh99kAAAAD6bR7C8w+azhi09C3o6V9eoAXNHDOxfd6S2YQA0KVr1JMOFXyDrK1JGUMJ4nxW2/+HMb1+LMqN+S4odXfGdr6O</EncryptedPassword>
+    <History>True|2024-06-22T13:50:27.5116719Z||;True|2024-06-22T14:47:09.0619556+01:00||;True|2024-06-22T14:44:53.2681656+01:00||;True|2024-06-22T14:36:21.0449585+01:00||;True|2024-06-22T14:23:06.1458630+01:00||;True|2024-06-22T14:17:54.0037551+01:00||;True|2024-06-22T14:14:13.7118492+01:00||;True|2024-06-22T14:04:39.8885027+01:00||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <EFMigrations Include="Aspbackend.Data.AppDbContext">
+      <Value>Data Source=aspbackenddbserver.database.windows.net,1433%3bInitial Catalog=Aspbackend_db%3bUser ID=Fanal%3bPassword=IhaveonlyGod01..</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

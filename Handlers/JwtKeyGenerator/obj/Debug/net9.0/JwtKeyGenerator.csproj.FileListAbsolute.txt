@@ -1,0 +1,15 @@
+C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\Handlers\JwtKeyGenerator\bin\Debug\net9.0\JwtKeyGenerator.exe
+C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\Handlers\JwtKeyGenerator\bin\Debug\net9.0\JwtKeyGenerator.deps.json
+C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\Handlers\JwtKeyGenerator\bin\Debug\net9.0\JwtKeyGenerator.runtimeconfig.json
+C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\Handlers\JwtKeyGenerator\bin\Debug\net9.0\JwtKeyGenerator.dll
+C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\Handlers\JwtKeyGenerator\bin\Debug\net9.0\JwtKeyGenerator.pdb
+C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\Handlers\JwtKeyGenerator\obj\Debug\net9.0\JwtKeyGenerator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\Handlers\JwtKeyGenerator\obj\Debug\net9.0\JwtKeyGenerator.AssemblyInfoInputs.cache
+C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\Handlers\JwtKeyGenerator\obj\Debug\net9.0\JwtKeyGenerator.AssemblyInfo.cs
+C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\Handlers\JwtKeyGenerator\obj\Debug\net9.0\JwtKeyGenerator.csproj.CoreCompileInputs.cache
+C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\Handlers\JwtKeyGenerator\obj\Debug\net9.0\JwtKeyGenerator.sourcelink.json
+C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\Handlers\JwtKeyGenerator\obj\Debug\net9.0\JwtKeyGenerator.dll
+C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\Handlers\JwtKeyGenerator\obj\Debug\net9.0\refint\JwtKeyGenerator.dll
+C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\Handlers\JwtKeyGenerator\obj\Debug\net9.0\JwtKeyGenerator.pdb
+C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\Handlers\JwtKeyGenerator\obj\Debug\net9.0\JwtKeyGenerator.genruntimeconfig.cache
+C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\Handlers\JwtKeyGenerator\obj\Debug\net9.0\ref\JwtKeyGenerator.dll

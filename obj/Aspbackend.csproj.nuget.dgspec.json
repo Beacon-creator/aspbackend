@@ -54,6 +54,18 @@
               "target": "Package",
               "version": "[1.7.0, )"
             },
+            "FluentEmail.Mailgun": {
+              "target": "Package",
+              "version": "[3.0.2, )"
+            },
+            "Mailjet.Api": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[8.0.6, )"
@@ -76,6 +88,10 @@
               "target": "Package",
               "version": "[8.0.2, )"
             },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[111.3.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"
@@ -87,6 +103,10 @@
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.6, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.6.2, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",

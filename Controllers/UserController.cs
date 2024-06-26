@@ -1,12 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using System.Security.Cryptography;
+using System.Text;
+using System.IdentityModel.Tokens.Jwt;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Aspbackend.Data;
 using Aspbackend.Model;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
+using Microsoft.Extensions.Caching.Memory;
+using static Aspbackend.Model.PasswordReset;
+using System.Net.Mail;
+using Microsoft.CodeAnalysis.Scripting;
+using System.Net;
+using System.Net.Mail;
+
 
 namespace Aspbackend.Controllers
 {
@@ -15,36 +24,58 @@ namespace Aspbackend.Controllers
     public class UserController : ControllerBase
     {
         private readonly AppDbContext _context;
+        private readonly IConfiguration _configuration;
 
-        public UserController(AppDbContext context)
+        public UserController(AppDbContext context, IConfiguration configuration)
         {
             _context = context;
+            _configuration = configuration;
         }
 
         // GET: api/Users
         [HttpGet]
+        [Authorize]
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
-            return await _context.Users.ToListAsync();
+            try
+            {
+                return await _context.Users.ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                // Log the error (uncomment the following line after adding a logger)
+                // _logger.LogError(ex, "Error occurred while fetching users.");
+                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error.");
+            }
         }
 
         // GET: api/Users/5
         [HttpGet("{id}")]
+        [Authorize]
         public async Task<ActionResult<User>> GetUser(int id)
         {
-            var user = await _context.Users.FindAsync(id);
-
-            if (user == null)
+            try
             {
-                return NotFound();
-            }
+                var user = await _context.Users.FindAsync(id);
 
-            return user;
+                if (user == null)
+                {
+                    return NotFound();
+                }
+
+                return user;
+            }
+            catch (Exception ex)
+            {
+                // Log the error (uncomment the following line after adding a logger)
+                // _logger.LogError(ex, "Error occurred while fetching the user.");
+                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error.");
+            }
         }
 
         // PUT: api/Users/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
+        [Authorize]
         public async Task<IActionResult> PutUser(int id, User user)
         {
             if (id != user.Id)
@@ -69,35 +100,64 @@ namespace Aspbackend.Controllers
                     throw;
                 }
             }
+            catch (Exception ex)
+            {
+                // Log the error (uncomment the following line after adding a logger)
+                // _logger.LogError(ex, "Error occurred while updating the user.");
+                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error.");
+            }
 
             return NoContent();
         }
 
         // POST: api/Users
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<User>> PostUser(User user)
         {
-            _context.Users.Add(user);
-            await _context.SaveChangesAsync();
+            try
+            {
+                CreatePasswordHash(user.Password, out byte[] passwordHash, out byte[] passwordSalt);
 
-            return CreatedAtAction("GetUser", new { id = user.Id }, user);
+                user.PasswordHash = passwordHash;
+                user.PasswordSalt = passwordSalt;
+
+                _context.Users.Add(user);
+                await _context.SaveChangesAsync();
+
+                return CreatedAtAction("GetUser", new { id = user.Id }, user);
+            }
+            catch (Exception ex)
+            {
+                // Log the error (uncomment the following line after adding a logger)
+                // _logger.LogError(ex, "Error occurred while creating the user.");
+                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error.");
+            }
         }
 
         // DELETE: api/Users/5
         [HttpDelete("{id}")]
+        [Authorize]
         public async Task<IActionResult> DeleteUser(int id)
         {
-            var user = await _context.Users.FindAsync(id);
-            if (user == null)
+            try
             {
-                return NotFound();
+                var user = await _context.Users.FindAsync(id);
+                if (user == null)
+                {
+                    return NotFound();
+                }
+
+                _context.Users.Remove(user);
+                await _context.SaveChangesAsync();
+
+                return NoContent();
             }
-
-            _context.Users.Remove(user);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
+            catch (Exception ex)
+            {
+                // Log the error (uncomment the following line after adding a logger)
+                // _logger.LogError(ex, "Error occurred while deleting the user.");
+                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error.");
+            }
         }
 
         private bool UserExists(int id)
@@ -105,18 +165,15 @@ namespace Aspbackend.Controllers
             return _context.Users.Any(e => e.Id == id);
         }
 
-
-        [HttpGet("{email}/{password}")]
-        public async Task<ActionResult<User>> Login(string email, string password)
+        private void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
         {
-            if (!String.IsNullOrWhiteSpace(email) && !string.IsNullOrWhiteSpace(password))
+            using (var hmac = new HMACSHA512())
             {
-                var user = await _context.Users
-                    .Where(x => x.Email!.ToLower().Equals(email.ToLower()) && x.Password == password)
-                    .FirstOrDefaultAsync();
-                return user != null ? Ok(user) : NotFound("User not found");
+                passwordSalt = hmac.Key;
+                passwordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password));
             }
-            return BadRequest("Invalid Request");
         }
+
+
     }
 }

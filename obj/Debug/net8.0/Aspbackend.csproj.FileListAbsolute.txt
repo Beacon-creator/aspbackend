@@ -16,6 +16,7 @@ C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\bin\Debug\net8.0\Amazon.L
 C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\bin\Debug\net8.0\Azure.Identity.dll
 C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\bin\Debug\net8.0\Humanizer.dll
+C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\bin\Debug\net8.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
@@ -267,3 +268,7 @@ C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\obj\Debug\net8.0\refint\A
 C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\obj\Debug\net8.0\Aspbackend.pdb
 C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\obj\Debug\net8.0\Aspbackend.genruntimeconfig.cache
 C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\obj\Debug\net8.0\ref\Aspbackend.dll
+C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\bin\Debug\net8.0\FluentEmail.Core.dll
+C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\bin\Debug\net8.0\FluentEmail.Mailgun.dll
+C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\bin\Debug\net8.0\RestSharp.dll
+C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\bin\Debug\net8.0\Mailjet.Client.dll
