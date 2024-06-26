@@ -22,9 +22,16 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     );
 });
 
-//adding email service
+// Adding email service
 builder.Services.AddTransient<EmailService>();
 
+// Retrieve the JWT key from environment variable
+var jwtKey = Environment.GetEnvironmentVariable("JWT_KEY");
+
+if (string.IsNullOrEmpty(jwtKey))
+{
+    throw new InvalidOperationException("JWT_KEY environment variable is not set.");
+}
 
 // Adding JWT implementation
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -38,7 +45,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidateIssuerSigningKey = true,
             ValidIssuer = builder.Configuration["Jwt:Issuer"],
             ValidAudience = builder.Configuration["Jwt:Audience"],
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey))
         };
     });
 

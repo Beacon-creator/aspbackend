@@ -6,23 +6,28 @@ using System.Threading.Tasks;
 
 public class EmailService
 {
-    private readonly IConfiguration _configuration;
     private readonly RestClient _client;
 
-    public EmailService(IConfiguration configuration)
+    public EmailService()
     {
-        _configuration = configuration;
+        var mailgunApiKey = Environment.GetEnvironmentVariable("MAILGUN_APIKEY");
+        var mailgunDomain = Environment.GetEnvironmentVariable("MAILGUN_DOMAIN");
+
         _client = new RestClient(new RestClientOptions("https://api.mailgun.net/v3")
         {
-            Authenticator = new HttpBasicAuthenticator("api", _configuration["Mailgun:ApiKey"])
+            Authenticator = new HttpBasicAuthenticator("api", mailgunApiKey)
         });
+
+        MailgunDomain = mailgunDomain;
     }
+
+    private string MailgunDomain { get; }
 
     public async Task SendEmailAsync(string toEmail, string subject, string message)
     {
         var request = new RestRequest("{domain}/messages", Method.Post);
-        request.AddParameter("domain", _configuration["Mailgun:Domain"], ParameterType.UrlSegment);
-        request.AddParameter("from", $"Excited User <mailgun@{_configuration["Mailgun:Domain"]}>");
+        request.AddParameter("domain", MailgunDomain, ParameterType.UrlSegment);
+        request.AddParameter("from", $"Excited User <mailgun@{MailgunDomain}>");
         request.AddParameter("to", toEmail);
         request.AddParameter("subject", subject);
         request.AddParameter("text", message);

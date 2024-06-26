@@ -7,8 +7,6 @@ using Microsoft.IdentityModel.Tokens;
 using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
-using System.Net;
-using System.Net.Mail;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
@@ -22,13 +20,14 @@ namespace Aspbackend.Controllers
     {
         private readonly AppDbContext _context;
         private readonly IConfiguration _configuration;
+        private readonly string _jwtKey;
 
         public LoginController(AppDbContext context, IConfiguration configuration)
         {
             _context = context;
             _configuration = configuration;
+            _jwtKey = Environment.GetEnvironmentVariable("JWT_KEY");
         }
-
 
         // POST: api/Users/Login
         [HttpPost("")]
@@ -68,7 +67,7 @@ namespace Aspbackend.Controllers
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             };
 
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtKey));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
             var token = new JwtSecurityToken(
