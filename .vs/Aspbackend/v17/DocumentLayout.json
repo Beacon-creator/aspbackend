@@ -90,7 +90,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 22,
+          "SelectedChildIndex": 21,
           "Children": [
             {
               "$type": "Bookmark",
@@ -121,10 +121,6 @@
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:3:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "Aspbackend.csproj",
@@ -132,9 +128,10 @@
               "RelativeDocumentMoniker": "Aspbackend.csproj",
               "ToolTip": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\Aspbackend.csproj",
               "RelativeToolTip": "Aspbackend.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAABZAAAA",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAABEAAABZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-06-26T10:51:16.336Z"
+              "WhenOpened": "2024-06-26T10:51:16.336Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -298,8 +295,8 @@
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\Program.cs*",
-              "RelativeToolTip": "Program.cs*",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\Program.cs",
+              "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAABQAAAAAAAAAAADwv0wAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-25T10:02:01.127Z",

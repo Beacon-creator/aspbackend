@@ -528,3 +528,8 @@ C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\obj\Release\net8.0\refint
 C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\obj\Release\net8.0\Aspbackend.pdb
 C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\obj\Release\net8.0\Aspbackend.genruntimeconfig.cache
 C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\obj\Release\net8.0\ref\Aspbackend.dll
+C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\bin\Release\net8.0\FluentEmail.Core.dll
+C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\bin\Release\net8.0\FluentEmail.Mailgun.dll
+C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\bin\Release\net8.0\Mailjet.Client.dll
+C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\bin\Release\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\bin\Release\net8.0\RestSharp.dll
