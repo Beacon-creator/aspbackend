@@ -3,8 +3,14 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using DotNetEnv;
+
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Load environment variables from .env file
+Env.Load();
+
 
 // Add services to the container.
 
@@ -25,12 +31,14 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 // Adding email service
 builder.Services.AddTransient<EmailService>();
 
-// Retrieve the JWT key from environment variable
+// Retrieve JWT configuration from environment variables
 var jwtKey = Environment.GetEnvironmentVariable("JWT_KEY");
+var issuer = Environment.GetEnvironmentVariable("ISSUER");
+var audience = Environment.GetEnvironmentVariable("AUDIENCE");
 
-if (string.IsNullOrEmpty(jwtKey))
+if (string.IsNullOrEmpty(jwtKey) || string.IsNullOrEmpty(issuer) || string.IsNullOrEmpty(audience))
 {
-    throw new InvalidOperationException("JWT_KEY environment variable is not set.");
+    throw new InvalidOperationException("JWT configuration environment variables are not set.");
 }
 
 // Adding JWT implementation
@@ -43,8 +51,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidateAudience = true,
             ValidateLifetime = true,
             ValidateIssuerSigningKey = true,
-            ValidIssuer = builder.Configuration["Jwt:Issuer"],
-            ValidAudience = builder.Configuration["Jwt:Audience"],
+            ValidIssuer = issuer,
+            ValidAudience = audience,
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey))
         };
     });

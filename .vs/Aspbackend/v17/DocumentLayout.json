@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|c:\\users\\user\\onedrive\\documents\\backendasp\\aspbackend\\handlers\\jwtkeygenerator\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|solutionrelative:handlers\\jwtkeygenerator\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|c:\\users\\user\\onedrive\\documents\\backendasp\\aspbackend\\.env||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|solutionrelative:.env||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|c:\\users\\user\\onedrive\\documents\\backendasp\\aspbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,20 +19,20 @@
       "RelativeMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|solutionrelative:controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|c:\\users\\user\\onedrive\\documents\\backendasp\\aspbackend\\handlers\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|solutionrelative:handlers\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|c:\\users\\user\\onedrive\\documents\\backendasp\\aspbackend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|c:\\users\\user\\onedrive\\documents\\backendasp\\aspbackend\\model\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|solutionrelative:model\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|c:\\users\\user\\onedrive\\documents\\backendasp\\aspbackend\\controllers\\passwordresetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|solutionrelative:controllers\\passwordresetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|c:\\users\\user\\onedrive\\documents\\backendasp\\aspbackend\\handlers\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|solutionrelative:handlers\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|c:\\users\\user\\onedrive\\documents\\backendasp\\aspbackend\\model\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|solutionrelative:model\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|c:\\users\\user\\onedrive\\documents\\backendasp\\aspbackend\\controllers\\signupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -90,7 +98,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 21,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -122,20 +130,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\Handlers\\JwtKeyGenerator\\Program.cs",
+              "RelativeDocumentMoniker": "Handlers\\JwtKeyGenerator\\Program.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\Handlers\\JwtKeyGenerator\\Program.cs",
+              "RelativeToolTip": "Handlers\\JwtKeyGenerator\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T17:57:17.493Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": ".env",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\.env",
+              "RelativeDocumentMoniker": ".env",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\.env*",
+              "RelativeToolTip": ".env*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-06-26T17:47:59.877Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "Aspbackend.csproj",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\Aspbackend.csproj",
               "RelativeDocumentMoniker": "Aspbackend.csproj",
               "ToolTip": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\Aspbackend.csproj",
               "RelativeToolTip": "Aspbackend.csproj",
-              "ViewState": "AQIAABgAAAAAAAAAAAAAABEAAABZAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2024-06-26T10:51:16.336Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "VerificationModel.cs",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\Model\\VerificationModel.cs",
               "RelativeDocumentMoniker": "Model\\VerificationModel.cs",
@@ -147,7 +181,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "EmailService.cs",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\Handlers\\EmailService.cs",
               "RelativeDocumentMoniker": "Handlers\\EmailService.cs",
@@ -159,7 +193,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "SignupController.cs",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\Controllers\\SignupController.cs",
               "RelativeDocumentMoniker": "Controllers\\SignupController.cs",
@@ -171,15 +205,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "LoginController.cs",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
               "ToolTip": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\Controllers\\LoginController.cs",
               "RelativeToolTip": "Controllers\\LoginController.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAuwBwAAABEAAAA",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAuwFwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T14:28:34.389Z"
+              "WhenOpened": "2024-06-25T14:28:34.389Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -191,11 +226,12 @@
               "RelativeToolTip": "Controllers\\PasswordResetController.cs",
               "ViewState": "AQIAAHMAAAAAAAAAAAAAwIMAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T14:15:58.258Z"
+              "WhenOpened": "2024-06-25T14:15:58.258Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "VerifyCodeModel.cs",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\Model\\VerifyCodeModel.cs",
               "RelativeDocumentMoniker": "Model\\VerifyCodeModel.cs",
@@ -207,7 +243,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "ResetPasswordModel.cs",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\Model\\ResetPasswordModel.cs",
               "RelativeDocumentMoniker": "Model\\ResetPasswordModel.cs",
@@ -219,7 +255,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
@@ -231,7 +267,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "SignupModel.cs",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\Model\\SignupModel.cs",
               "RelativeDocumentMoniker": "Model\\SignupModel.cs",
@@ -243,7 +279,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "LoginModel.cs",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\Model\\LoginModel.cs",
               "RelativeDocumentMoniker": "Model\\LoginModel.cs",
@@ -255,7 +291,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\Model\\User.cs",
               "RelativeDocumentMoniker": "Model\\User.cs",
@@ -267,7 +303,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "PasswordReset.cs",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\Model\\PasswordReset.cs",
               "RelativeDocumentMoniker": "Model\\PasswordReset.cs",
@@ -279,7 +315,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Controllers\\UserController.cs",
@@ -291,20 +327,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAADwv0wAAAAAAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABYAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-25T10:02:01.127Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "Aspbackend.http",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\Aspbackend.http",
               "RelativeDocumentMoniker": "Aspbackend.http",
@@ -316,19 +352,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
               "ToolTip": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAqAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-25T09:50:27.322Z"
+              "WhenOpened": "2024-06-25T09:50:27.322Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": ".NETCoreApp,Version=v8.0.AssemblyAttributes.cs",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\obj\\Debug\\net8.0\\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs",
               "RelativeDocumentMoniker": "obj\\Debug\\net8.0\\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs",
@@ -340,7 +377,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "Aspbackend.AssemblyInfo.cs",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\obj\\Debug\\net8.0\\Aspbackend.AssemblyInfo.cs",
               "RelativeDocumentMoniker": "obj\\Debug\\net8.0\\Aspbackend.AssemblyInfo.cs",
@@ -352,7 +389,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "20240607122034_Initials.cs",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\Data\\Migrations\\20240607122034_Initials.cs",
               "RelativeDocumentMoniker": "Data\\Migrations\\20240607122034_Initials.cs",

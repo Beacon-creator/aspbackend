@@ -21,12 +21,21 @@ namespace Aspbackend.Controllers
         private readonly AppDbContext _context;
         private readonly IConfiguration _configuration;
         private readonly string _jwtKey;
+        private readonly string _issuer;
+        private readonly string _audience;
 
         public LoginController(AppDbContext context, IConfiguration configuration)
         {
             _context = context;
             _configuration = configuration;
             _jwtKey = Environment.GetEnvironmentVariable("JWT_KEY");
+            _issuer = Environment.GetEnvironmentVariable("ISSUER");
+            _audience = Environment.GetEnvironmentVariable("AUDIENCE");
+
+            if (string.IsNullOrEmpty(_jwtKey) || string.IsNullOrEmpty(_issuer) || string.IsNullOrEmpty(_audience))
+            {
+                throw new InvalidOperationException("JWT configuration environment variables are not set.");
+            }
         }
 
         // POST: api/Users/Login
@@ -71,8 +80,8 @@ namespace Aspbackend.Controllers
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
             var token = new JwtSecurityToken(
-                issuer: _configuration["Jwt:Issuer"],
-                audience: _configuration["Jwt:Audience"],
+                issuer: _issuer,
+                audience: _audience,
                 claims: claims,
                 expires: DateTime.Now.AddMinutes(30),
                 signingCredentials: creds);

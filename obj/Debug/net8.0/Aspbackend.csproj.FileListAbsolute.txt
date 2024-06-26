@@ -272,3 +272,5 @@ C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\bin\Debug\net8.0\FluentEm
 C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\bin\Debug\net8.0\FluentEmail.Mailgun.dll
 C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\bin\Debug\net8.0\RestSharp.dll
 C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\bin\Debug\net8.0\Mailjet.Client.dll
+C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\bin\Debug\net8.0\DotNetEnv.dll
+C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\bin\Debug\net8.0\Sprache.dll
