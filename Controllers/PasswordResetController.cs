@@ -3,7 +3,7 @@ using Aspbackend.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging; // Add logging
+using Microsoft.Extensions.Logging;
 using System;
 using System.Linq;
 using System.Security.Cryptography;
@@ -19,14 +19,14 @@ namespace Aspbackend.Controllers
         private readonly AppDbContext _context;
         private readonly IConfiguration _configuration;
         private readonly EmailService _emailService;
-        private readonly ILogger<PasswordResetController> _logger; // Add logger
+        private readonly ILogger<PasswordResetController> _logger;
 
         public PasswordResetController(AppDbContext context, IConfiguration configuration, EmailService emailService, ILogger<PasswordResetController> logger)
         {
             _context = context;
             _configuration = configuration;
             _emailService = emailService;
-            _logger = logger; // Initialize logger
+            _logger = logger;
         }
 
         [HttpPost("send-code")]
@@ -76,25 +76,39 @@ namespace Aspbackend.Controllers
                 return BadRequest("Invalid or expired verification code.");
             }
 
-            _logger.LogInformation($"Verification code {verificationModel.Code} for email {verificationModel.Email} is valid.");
+            // Generate a temporary token
+            var tempToken = GenerateTemporaryToken();
+            var tokenExpiryDate = DateTime.UtcNow.AddMinutes(15);
 
-            return Ok("Verification code is valid.");
+            // Optionally, you can store this token in the database or an in-memory store like Redis.
+            var resetToken = new PasswordResetToken
+            {
+                Email = verificationModel.Email,
+                Token = tempToken,
+                ExpiryDate = tokenExpiryDate
+            };
+            _context.PasswordResetTokens.Add(resetToken);
+            await _context.SaveChangesAsync();
+
+            _logger.LogInformation($"Verification code {verificationModel.Code} for email {verificationModel.Email} is valid. Temporary token generated.");
+
+            return Ok(new { Token = tempToken });
         }
 
         [HttpPost("reset-password")]
         public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordModel resetPasswordModel)
         {
-            _logger.LogInformation($"Resetting password for email {resetPasswordModel.Email} with code {resetPasswordModel.Code}.");
+            _logger.LogInformation($"Resetting password for email {resetPasswordModel.Email} with temporary token {resetPasswordModel.Token}.");
 
-            var passwordReset = await _context.PasswordResets
-                .FirstOrDefaultAsync(pr => pr.Email.ToLower() == resetPasswordModel.Email.ToLower() &&
-                                            pr.VerificationCode == resetPasswordModel.Code &&
-                                            pr.ExpiryDate > DateTime.UtcNow);
+            var resetToken = await _context.PasswordResetTokens
+                .FirstOrDefaultAsync(rt => rt.Email.ToLower() == resetPasswordModel.Email.ToLower() &&
+                                           rt.Token == resetPasswordModel.Token &&
+                                           rt.ExpiryDate > DateTime.UtcNow);
 
-            if (passwordReset == null)
+            if (resetToken == null)
             {
-                _logger.LogWarning($"Invalid or expired verification code for email {resetPasswordModel.Email}.");
-                return BadRequest("Invalid or expired verification code.");
+                _logger.LogWarning($"Invalid or expired temporary token for email {resetPasswordModel.Email}.");
+                return BadRequest("Invalid or expired temporary token.");
             }
 
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Email.ToLower() == resetPasswordModel.Email.ToLower());
@@ -108,7 +122,7 @@ namespace Aspbackend.Controllers
             user.PasswordSalt = passwordSalt;
 
             _context.Users.Update(user);
-            _context.PasswordResets.Remove(passwordReset);  // Remove the used token
+            _context.PasswordResetTokens.Remove(resetToken);  // Remove the used token
             await _context.SaveChangesAsync();
 
             _logger.LogInformation($"Password has been reset successfully for email {resetPasswordModel.Email}.");
@@ -119,6 +133,16 @@ namespace Aspbackend.Controllers
         private string GenerateVerificationCode()
         {
             return new Random().Next(100000, 999999).ToString();
+        }
+
+        private string GenerateTemporaryToken()
+        {
+            using (var rng = new RNGCryptoServiceProvider())
+            {
+                var tokenData = new byte[32];
+                rng.GetBytes(tokenData);
+                return Convert.ToBase64String(tokenData);
+            }
         }
 
         private void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)

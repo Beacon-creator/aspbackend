@@ -15,6 +15,8 @@ namespace Aspbackend.Data
         //passwordreset model
         public DbSet<PasswordReset> PasswordResets { get; set; }
 
+        public DbSet<PasswordResetToken> PasswordResetTokens { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

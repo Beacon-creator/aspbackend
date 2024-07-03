@@ -14,6 +14,7 @@ C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\obj\Release\net8.0\PubTmp
 C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\obj\Release\net8.0\PubTmp\Out\Amazon.Lambda.Serialization.SystemTextJson.dll
 C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\obj\Release\net8.0\PubTmp\Out\Azure.Core.dll
 C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\obj\Release\net8.0\PubTmp\Out\Azure.Identity.dll
+C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\obj\Release\net8.0\PubTmp\Out\DotNetEnv.dll
 C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\obj\Release\net8.0\PubTmp\Out\FluentEmail.Core.dll
 C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\obj\Release\net8.0\PubTmp\Out\FluentEmail.Mailgun.dll
 C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\obj\Release\net8.0\PubTmp\Out\Humanizer.dll
@@ -73,6 +74,7 @@ C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\obj\Release\net8.0\PubTmp
 C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\obj\Release\net8.0\PubTmp\Out\NuGet.Protocol.dll
 C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\obj\Release\net8.0\PubTmp\Out\NuGet.Versioning.dll
 C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\obj\Release\net8.0\PubTmp\Out\RestSharp.dll
+C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\obj\Release\net8.0\PubTmp\Out\Sprache.dll
 C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll
