@@ -44,6 +44,28 @@ namespace Aspbackend.Data.Migrations
                     b.ToTable("PasswordResets");
                 });
 
+            modelBuilder.Entity("Aspbackend.Model.PasswordResetToken", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("ExpiryDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Token")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PasswordResetTokens");
+                });
+
             modelBuilder.Entity("Aspbackend.Model.User", b =>
                 {
                     b.Property<int>("Id")

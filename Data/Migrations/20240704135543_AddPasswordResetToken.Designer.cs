@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Aspbackend.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240703160250_AddPasswordResetToken")]
+    [Migration("20240704135543_AddPasswordResetToken")]
     partial class AddPasswordResetToken
     {
         /// <inheritdoc />
@@ -45,6 +45,28 @@ namespace Aspbackend.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("PasswordResets");
+                });
+
+            modelBuilder.Entity("Aspbackend.Model.PasswordResetToken", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("ExpiryDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Token")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PasswordResetTokens");
                 });
 
             modelBuilder.Entity("Aspbackend.Model.User", b =>

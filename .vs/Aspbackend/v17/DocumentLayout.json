@@ -11,16 +11,16 @@
       "RelativeMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|c:\\users\\user\\onedrive\\documents\\backendasp\\aspbackend\\model\\passwordresettoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|solutionrelative:model\\passwordresettoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|c:\\users\\user\\onedrive\\documents\\backendasp\\aspbackend\\model\\resetpasswordmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|solutionrelative:model\\resetpasswordmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|c:\\users\\user\\onedrive\\documents\\backendasp\\aspbackend\\model\\signupmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|solutionrelative:model\\signupmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|c:\\users\\user\\onedrive\\documents\\backendasp\\aspbackend\\model\\passwordresettoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|solutionrelative:model\\passwordresettoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7C4C452F-7908-49AF-BC16-18274F713B47}|Aspbackend.csproj|c:\\users\\user\\onedrive\\documents\\backendasp\\aspbackend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -102,7 +102,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 15,
+          "SelectedChildIndex": 16,
           "Children": [
             {
               "$type": "Bookmark",
@@ -133,13 +133,17 @@
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "PasswordResetToken.cs",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\Model\\PasswordResetToken.cs",
               "RelativeDocumentMoniker": "Model\\PasswordResetToken.cs",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\Model\\PasswordResetToken.cs*",
-              "RelativeToolTip": "Model\\PasswordResetToken.cs*",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\Model\\PasswordResetToken.cs",
+              "RelativeToolTip": "Model\\PasswordResetToken.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-03T16:00:04.109Z",
@@ -235,9 +239,9 @@
               "Title": "PasswordResetController.cs",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\Controllers\\PasswordResetController.cs",
               "RelativeDocumentMoniker": "Controllers\\PasswordResetController.cs",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\Controllers\\PasswordResetController.cs*",
-              "RelativeToolTip": "Controllers\\PasswordResetController.cs*",
-              "ViewState": "AQIAAHAAAAAAAAAAAAAkwFkAAAAoAAAA",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\Controllers\\PasswordResetController.cs",
+              "RelativeToolTip": "Controllers\\PasswordResetController.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAQwCkAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-25T14:15:58.258Z",
               "EditorCaption": ""
@@ -256,12 +260,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ResetPasswordModel.cs",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\Model\\ResetPasswordModel.cs",
               "RelativeDocumentMoniker": "Model\\ResetPasswordModel.cs",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\Model\\ResetPasswordModel.cs*",
-              "RelativeToolTip": "Model\\ResetPasswordModel.cs*",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\Model\\ResetPasswordModel.cs",
+              "RelativeToolTip": "Model\\ResetPasswordModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-25T14:07:05.381Z",
@@ -273,8 +277,8 @@
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\Data\\AppDbContext.cs*",
-              "RelativeToolTip": "Data\\AppDbContext.cs*",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Data\\AppDbContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAABKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-25T14:04:27.333Z",
@@ -282,7 +286,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "SignupModel.cs",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Documents\\backendasp\\Aspbackend\\Model\\SignupModel.cs",
               "RelativeDocumentMoniker": "Model\\SignupModel.cs",
