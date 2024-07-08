@@ -137,13 +137,14 @@ namespace Aspbackend.Controllers
 
         private string GenerateTemporaryToken()
         {
-            using (var rng = new RNGCryptoServiceProvider())
+            using (var rng = RandomNumberGenerator.Create())
             {
                 var tokenData = new byte[32];
                 rng.GetBytes(tokenData);
                 return Convert.ToBase64String(tokenData);
             }
         }
+
 
         private void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
         {

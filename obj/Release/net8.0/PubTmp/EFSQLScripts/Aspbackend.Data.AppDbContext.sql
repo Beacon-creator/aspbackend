@@ -270,3 +270,34 @@ GO
 COMMIT;
 GO
 
+BEGIN TRANSACTION;
+GO
+
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20240704135543_AddPasswordResetToken'
+)
+BEGIN
+    CREATE TABLE [PasswordResetTokens] (
+        [Id] int NOT NULL IDENTITY,
+        [Email] nvarchar(max) NULL,
+        [Token] nvarchar(max) NULL,
+        [ExpiryDate] datetime2 NOT NULL,
+        CONSTRAINT [PK_PasswordResetTokens] PRIMARY KEY ([Id])
+    );
+END;
+GO
+
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20240704135543_AddPasswordResetToken'
+)
+BEGIN
+    INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+    VALUES (N'20240704135543_AddPasswordResetToken', N'8.0.6');
+END;
+GO
+
+COMMIT;
+GO
+

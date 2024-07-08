@@ -10,12 +10,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
 using Microsoft.Extensions.Caching.Memory;
-using static Aspbackend.Model.PasswordReset;
-using System.Net.Mail;
-using Microsoft.CodeAnalysis.Scripting;
-using System.Net;
-using System.Net.Mail;
-
+using Microsoft.Extensions.Logging;
 
 namespace Aspbackend.Controllers
 {
@@ -25,11 +20,15 @@ namespace Aspbackend.Controllers
     {
         private readonly AppDbContext _context;
         private readonly IConfiguration _configuration;
+        private readonly IMemoryCache _cache;
+        private readonly ILogger<UserController> _logger;
 
-        public UserController(AppDbContext context, IConfiguration configuration)
+        public UserController(AppDbContext context, IConfiguration configuration, IMemoryCache cache, ILogger<UserController> logger)
         {
             _context = context;
             _configuration = configuration;
+            _cache = cache;
+            _logger = logger;
         }
 
         // GET: api/Users
@@ -43,8 +42,7 @@ namespace Aspbackend.Controllers
             }
             catch (Exception ex)
             {
-                // Log the error (uncomment the following line after adding a logger)
-                // _logger.LogError(ex, "Error occurred while fetching users.");
+                _logger.LogError(ex, "Error occurred while fetching users.");
                 return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error.");
             }
         }
@@ -67,8 +65,7 @@ namespace Aspbackend.Controllers
             }
             catch (Exception ex)
             {
-                // Log the error (uncomment the following line after adding a logger)
-                // _logger.LogError(ex, "Error occurred while fetching the user.");
+                _logger.LogError(ex, "Error occurred while fetching the user.");
                 return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error.");
             }
         }
@@ -102,8 +99,7 @@ namespace Aspbackend.Controllers
             }
             catch (Exception ex)
             {
-                // Log the error (uncomment the following line after adding a logger)
-                // _logger.LogError(ex, "Error occurred while updating the user.");
+                _logger.LogError(ex, "Error occurred while updating the user.");
                 return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error.");
             }
 
@@ -128,8 +124,7 @@ namespace Aspbackend.Controllers
             }
             catch (Exception ex)
             {
-                // Log the error (uncomment the following line after adding a logger)
-                // _logger.LogError(ex, "Error occurred while creating the user.");
+                _logger.LogError(ex, "Error occurred while creating the user.");
                 return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error.");
             }
         }
@@ -154,8 +149,76 @@ namespace Aspbackend.Controllers
             }
             catch (Exception ex)
             {
-                // Log the error (uncomment the following line after adding a logger)
-                // _logger.LogError(ex, "Error occurred while deleting the user.");
+                _logger.LogError(ex, "Error occurred while deleting the user.");
+                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error.");
+            }
+        }
+
+        // DELETE: api/Users/DeleteAccount
+        [HttpDelete("DeleteAccount")]
+        [Authorize]
+        public async Task<IActionResult> DeleteAccount()
+        {
+            try
+            {
+                var emailClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
+                if (emailClaim == null)
+                {
+                    _logger.LogError("Email claim not found in token.");
+                    _logger.LogInformation("All claims in token: {0}", string.Join(", ", User.Claims.Select(c => $"{c.Type}: {c.Value}")));
+                    return BadRequest("Invalid token: email not found.");
+                }
+
+                var email = emailClaim.Value;
+                _logger.LogInformation($"Email extracted from token: {email}");
+
+                var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
+                if (user == null)
+                {
+                    _logger.LogError($"User not found for email: {email}");
+                    return NotFound("User not found.");
+                }
+
+                _context.Users.Remove(user);
+                await _context.SaveChangesAsync();
+
+                _logger.LogInformation($"User with email {email} deleted successfully.");
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while deleting the account.");
+                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error.");
+            }
+        }
+
+        // POST: api/Users/Logout
+        [HttpPost("Logout")]
+        [Authorize]
+        public IActionResult Logout()
+        {
+            try
+            {
+                var emailClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
+                if (emailClaim == null)
+                {
+                    _logger.LogError("Email claim not found in token.");
+                    _logger.LogInformation("All claims in token: {0}", string.Join(", ", User.Claims.Select(c => $"{c.Type}: {c.Value}")));
+                    return BadRequest("Invalid token: email not found.");
+                }
+
+                var email = emailClaim.Value;
+                _logger.LogInformation($"Email extracted from token: {email}");
+
+                // Remove the user session or token from cache
+                _cache.Remove(email);
+
+                _logger.LogInformation($"User with email {email} logged out successfully.");
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while logging out.");
                 return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error.");
             }
         }
@@ -173,7 +236,5 @@ namespace Aspbackend.Controllers
                 passwordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password));
             }
         }
-
-
     }
 }

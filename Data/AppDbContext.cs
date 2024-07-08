@@ -17,6 +17,15 @@ namespace Aspbackend.Data
 
         public DbSet<PasswordResetToken> PasswordResetTokens { get; set; }
 
+        //bank model
+        public DbSet<BankLink> BankLinks { get; set; }
+
+        //card model
+        public DbSet<CardLink> CardLinks { get; set; }
+
+        //card model
+        public DbSet<VerificationCode> VerificationCodes { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -24,5 +33,6 @@ namespace Aspbackend.Data
             modelBuilder.Entity<User>().ToTable("Users"); // Adjust the table name to match your database
             
         }
+        public DbSet<Aspbackend.Model.CardLink> CardLink { get; set; } = default!;
     }
 }

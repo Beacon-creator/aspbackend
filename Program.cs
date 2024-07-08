@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using DotNetEnv;
-
+using Microsoft.Extensions.Caching.Memory;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,6 +30,11 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 // Adding email service
 builder.Services.AddTransient<EmailService>();
+
+
+// Register IMemoryCache
+builder.Services.AddMemoryCache();
+
 
 // Retrieve JWT configuration from environment variables
 var jwtKey = Environment.GetEnvironmentVariable("JWT_KEY");
