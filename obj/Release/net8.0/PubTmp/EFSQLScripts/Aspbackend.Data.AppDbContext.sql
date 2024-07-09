@@ -301,3 +301,65 @@ GO
 COMMIT;
 GO
 
+BEGIN TRANSACTION;
+GO
+
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20240708132423_newUpdates'
+)
+BEGIN
+    CREATE TABLE [BankLinks] (
+        [Id] int NOT NULL IDENTITY,
+        [AccountOwnerName] nvarchar(max) NULL,
+        [AccountNumber] nvarchar(max) NULL,
+        [BVN] nvarchar(max) NULL,
+        CONSTRAINT [PK_BankLinks] PRIMARY KEY ([Id])
+    );
+END;
+GO
+
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20240708132423_newUpdates'
+)
+BEGIN
+    CREATE TABLE [CardLink] (
+        [Id] int NOT NULL IDENTITY,
+        [CardHolderName] nvarchar(max) NULL,
+        [CardNumber] nvarchar(max) NULL,
+        [CVV] nvarchar(max) NULL,
+        [ExpiryDate] nvarchar(max) NULL,
+        CONSTRAINT [PK_CardLink] PRIMARY KEY ([Id])
+    );
+END;
+GO
+
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20240708132423_newUpdates'
+)
+BEGIN
+    CREATE TABLE [VerificationCodes] (
+        [Id] int NOT NULL IDENTITY,
+        [Code] nvarchar(max) NULL,
+        [Email] nvarchar(max) NULL,
+        [ExpiryDate] datetime2 NOT NULL,
+        CONSTRAINT [PK_VerificationCodes] PRIMARY KEY ([Id])
+    );
+END;
+GO
+
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20240708132423_newUpdates'
+)
+BEGIN
+    INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+    VALUES (N'20240708132423_newUpdates', N'8.0.6');
+END;
+GO
+
+COMMIT;
+GO
+

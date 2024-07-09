@@ -274,6 +274,3 @@ C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\obj\Debug\net8.0\refint\A
 C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\obj\Debug\net8.0\Aspbackend.pdb
 C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\obj\Debug\net8.0\Aspbackend.genruntimeconfig.cache
 C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\obj\Debug\net8.0\ref\Aspbackend.dll
-C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\bin\Debug\net8.0\Aspbackend.staticwebassets.endpoints.json
-C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\user\OneDrive\Documents\backendasp\Aspbackend\obj\Debug\net8.0\staticwebassets\msbuild.Aspbackend.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
