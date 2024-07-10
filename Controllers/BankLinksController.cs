@@ -8,9 +8,18 @@ using Microsoft.EntityFrameworkCore;
 using Aspbackend.Data;
 using Aspbackend.Model;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Authorization;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Security.Cryptography;
+using System.Text;
+using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
+
 
 namespace Aspbackend.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class BankLinksController : ControllerBase
@@ -148,14 +157,23 @@ namespace Aspbackend.Controllers
 
         // POST: api/BankLinks/SendVerificationCode
         [HttpPost("SendVerificationCode")]
-        public async Task<IActionResult> SendVerificationCode([FromBody] string email)
+        public async Task<IActionResult> SendVerificationCode()
         {
             try
             {
+                // Retrieve the email from the token
+                var emailClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
+                if (emailClaim == null)
+                {
+                    _logger.LogError("Email claim not found in token.");
+                    _logger.LogInformation("All claims in token: {0}", string.Join(", ", User.Claims.Select(c => $"{c.Type}: {c.Value}")));
+                    return BadRequest("Invalid token: email not found.");
+                }
+
                 var verificationCode = new VerificationCode
                 {
                     Code = GenerateVerificationCode(),
-                    Email = email,
+                    Email = emailClaim.Value,
                     ExpiryDate = DateTime.UtcNow.AddMinutes(15)
                 };
 
@@ -163,7 +181,7 @@ namespace Aspbackend.Controllers
                 await _context.SaveChangesAsync();
 
                 // Send email using EmailService
-                await _emailService.SendEmailAsync(email, "Your Verification Code", $"Your verification code is {verificationCode.Code}");
+                await _emailService.SendEmailAsync(emailClaim.Value, "Your Verification Code", $"Your verification code is {verificationCode.Code}");
 
                 return Ok("Verification code sent successfully.");
             }
