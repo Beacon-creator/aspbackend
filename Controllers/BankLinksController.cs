@@ -183,7 +183,7 @@ namespace Aspbackend.Controllers
                 // Send email using EmailService
                 await _emailService.SendEmailAsync(emailClaim.Value, "Your Verification Code", $"Your verification code is {verificationCode.Code}");
 
-                return Ok("Verification code sent successfully.");
+                return Ok(new { message = "Verification code sent successfully.", code = verificationCode.Code });
             }
             catch (Exception ex)
             {
