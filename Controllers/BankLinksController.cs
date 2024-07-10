@@ -198,8 +198,19 @@ namespace Aspbackend.Controllers
         {
             try
             {
+                var emailClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
+                if (emailClaim == null)
+                {
+                    _logger.LogError("Email claim not found in token.");
+                    _logger.LogInformation("All claims in token: {0}", string.Join(", ", User.Claims.Select(c => $"{c.Type}: {c.Value}")));
+                    return BadRequest("Invalid token: email not found.");
+                }
+
+                var email = emailClaim.Value;
+                _logger.LogInformation($"Email extracted from token: {email}");
+
                 var verificationCode = await _context.VerificationCodes
-                    .FirstOrDefaultAsync(vc => vc.Email == request.Email && vc.Code == request.Code);
+                    .FirstOrDefaultAsync(vc => vc.Email == email && vc.Code == request.Code);
 
                 if (verificationCode == null || verificationCode.ExpiryDate < DateTime.UtcNow)
                 {
