@@ -13,11 +13,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Aspbackend.Controllers
-{
+    {
     [Route("api/[controller]")]
     [ApiController]
     public class LoginController : ControllerBase
-    {
+        {
         private readonly AppDbContext _context;
         private readonly IConfiguration _configuration;
         private readonly string _jwtKey;
@@ -25,7 +25,7 @@ namespace Aspbackend.Controllers
         private readonly string _audience;
 
         public LoginController(AppDbContext context, IConfiguration configuration)
-        {
+            {
             _context = context;
             _configuration = configuration;
             _jwtKey = Environment.GetEnvironmentVariable("JWT_KEY");
@@ -33,46 +33,46 @@ namespace Aspbackend.Controllers
             _audience = Environment.GetEnvironmentVariable("AUDIENCE");
 
             if (string.IsNullOrEmpty(_jwtKey) || string.IsNullOrEmpty(_issuer) || string.IsNullOrEmpty(_audience))
-            {
+                {
                 throw new InvalidOperationException("JWT configuration environment variables are not set.");
+                }
             }
-        }
 
         // POST: api/Users/Login
         [HttpPost("")]
         public async Task<ActionResult<string>> Login([FromBody] LoginModel loginModel)
-        {
-            if (ModelState.IsValid)
             {
+            if (ModelState.IsValid)
+                {
                 var user = await _context.Users.FirstOrDefaultAsync(x =>
                     (x.Email.ToLower() == loginModel.Identifier.ToLower() || x.Phonenumber == loginModel.Identifier));
 
                 if (user == null || !VerifyPasswordHash(loginModel.Password, user.PasswordHash, user.PasswordSalt))
-                {
+                    {
                     return Unauthorized("Invalid credentials");
-                }
+                    }
 
                 var token = CreateToken(user);
                 return Ok(new { token });
-            }
+                }
 
             return BadRequest("Invalid request");
-        }
+            }
 
         private bool VerifyPasswordHash(string password, byte[] storedHash, byte[] storedSalt)
-        {
-            using (var hmac = new HMACSHA512(storedSalt))
             {
+            using (var hmac = new HMACSHA512(storedSalt))
+                {
                 var computedHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password));
                 return computedHash.SequenceEqual(storedHash);
+                }
             }
-        }
 
         private string CreateToken(User user)
-        {
+            {
             var claims = new[]
             {
-                new Claim(JwtRegisteredClaimNames.Sub, user.Email),
+                new Claim(JwtRegisteredClaimNames.Sub, user.Email), // Use "sub" for the subject, which is the email
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             };
 
@@ -87,6 +87,6 @@ namespace Aspbackend.Controllers
                 signingCredentials: creds);
 
             return new JwtSecurityTokenHandler().WriteToken(token);
+            }
         }
     }
-}
