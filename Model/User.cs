@@ -16,15 +16,16 @@ public class User
     [Required]
     [EmailAddress]
     public string? Email { get; set; }
-
-    [Required]
+ 
     public string? Phonenumber { get; set; }
 
-    public byte[] PasswordHash { get; set; }
+    public byte[]? PasswordHash { get; set; }
 
-    public byte[] PasswordSalt { get; set; }
+    public byte[]? PasswordSalt { get; set; }
 
     public bool Terms { get; set; }
+    public bool IsEmailVerified { get; set; } = false; // Default to false until verification is confirmed
+
 
     [NotMapped]
     public string? Password { get; set; }  // Temporary property for processing

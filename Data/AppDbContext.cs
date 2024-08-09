@@ -12,6 +12,8 @@ namespace Aspbackend.Data
         //User is the model
         public DbSet<User> Users { get; set; } = default!;
 
+        //User is the model
+        public DbSet<EmailVerification> EmailVerifications { get; set; }
         //passwordreset model
         public DbSet<PasswordReset> PasswordResets { get; set; }
 
