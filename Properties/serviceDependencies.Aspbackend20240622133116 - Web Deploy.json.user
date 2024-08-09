@@ -4,6 +4,10 @@
       "restored": true,
       "restoreTime": "2024-06-22T12:48:55.5190127Z"
     },
+    "identityapp1": {
+      "restored": true,
+      "restoreTime": "2024-08-09T18:01:06.7544444Z"
+    },
     "mssql1": {
       "restored": true,
       "restoreTime": "2024-06-22T12:59:24.7534382Z"

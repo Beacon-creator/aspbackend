@@ -5,6 +5,8 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using DotNetEnv;
 using Microsoft.Extensions.Caching.Memory;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.Identity.Web;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -62,21 +64,32 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidAudience = audience,
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey))
         };
-    });
+    })
+    .AddMicrosoftIdentityWebApi(builder.Configuration.GetSection("AzureAd"));
 
 builder.Services.AddAuthorization();
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
-{
+//if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
+//{
+//    app.UseSwagger();
+//    app.UseSwaggerUI(c =>
+//    {
+//        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Aspbackend v1");
+//        c.RoutePrefix = string.Empty; // Serve the Swagger UI at the app's root
+//    });
+//}
+
+if (app.Environment.IsDevelopment() || app.Environment.IsProduction() || app.Environment.IsStaging())
+    {
     app.UseSwagger();
     app.UseSwaggerUI(c =>
     {
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "Aspbackend v1");
-        c.RoutePrefix = string.Empty; // Serve the Swagger UI at the app's root
+        c.RoutePrefix = string.Empty;
     });
-}
+    }
 
 
 app.UseHttpsRedirection();

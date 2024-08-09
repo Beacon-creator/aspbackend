@@ -12,6 +12,10 @@
       "apiEndpoint": "https://aspbackendapi.azure-api.net/",
       "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.ApiManagement/service/Aspbackendapi/apis/Aspbackend",
       "type": "apis.azure"
+    },
+    "identityapp1": {
+      "connectionInfo": "App registration: aspbackend, Tenant: Default Directory (oeadebiyi68gmail.onmicrosoft.com - Microsoft Entra ID)",
+      "type": "identityapp.default"
     }
   }
 }

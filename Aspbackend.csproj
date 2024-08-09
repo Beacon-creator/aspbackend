@@ -16,23 +16,28 @@
 
   <ItemGroup>
     <PackageReference Include="Amazon.Lambda.AspNetCoreServer.Hosting" Version="1.7.0" />
-    <PackageReference Include="DotNetEnv" Version="3.0.0" />
+    <PackageReference Include="DotNetEnv" Version="3.1.0" />
     <PackageReference Include="FluentEmail.Mailgun" Version="3.0.2" />
     <PackageReference Include="Mailjet.Api" Version="3.0.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.6" />
-    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.6" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.6" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.6" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.6">
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="8.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.7">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
-    <PackageReference Include="RestSharp" Version="111.3.0" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
-    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.6.2" />
+    <PackageReference Include="Microsoft.Identity.Web" Version="3.0.1" />
+    <PackageReference Include="Microsoft.Identity.Web.UI" Version="3.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.3" />
+    <PackageReference Include="RestSharp" Version="111.4.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.7.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.7.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.7.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.7.0" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
-    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.6.2" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.0.1" />
     <PackageReference Include="Xamarin.Essentials" Version="1.8.1" />
   </ItemGroup>
 

@@ -32,7 +32,7 @@ IF NOT EXISTS (
 )
 BEGIN
     INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-    VALUES (N'20240607122034_Initials', N'8.0.6');
+    VALUES (N'20240607122034_Initials', N'8.0.7');
 END;
 GO
 
@@ -66,7 +66,7 @@ IF NOT EXISTS (
 )
 BEGIN
     INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-    VALUES (N'20240624082441_InitialMigration', N'8.0.6');
+    VALUES (N'20240624082441_InitialMigration', N'8.0.7');
 END;
 GO
 
@@ -166,7 +166,7 @@ IF NOT EXISTS (
 )
 BEGIN
     INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-    VALUES (N'20240624174806_MigrationThree', N'8.0.6');
+    VALUES (N'20240624174806_MigrationThree', N'8.0.7');
 END;
 GO
 
@@ -182,7 +182,7 @@ IF NOT EXISTS (
 )
 BEGIN
     INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-    VALUES (N'20240625090844_MigrationFour', N'8.0.6');
+    VALUES (N'20240625090844_MigrationFour', N'8.0.7');
 END;
 GO
 
@@ -232,7 +232,7 @@ IF NOT EXISTS (
 )
 BEGIN
     INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-    VALUES (N'20240625092900_MigrationFive', N'8.0.6');
+    VALUES (N'20240625092900_MigrationFive', N'8.0.7');
 END;
 GO
 
@@ -263,7 +263,7 @@ IF NOT EXISTS (
 )
 BEGIN
     INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-    VALUES (N'20240625153752_MigrationSix', N'8.0.6');
+    VALUES (N'20240625153752_MigrationSix', N'8.0.7');
 END;
 GO
 
@@ -294,7 +294,7 @@ IF NOT EXISTS (
 )
 BEGIN
     INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-    VALUES (N'20240704135543_AddPasswordResetToken', N'8.0.6');
+    VALUES (N'20240704135543_AddPasswordResetToken', N'8.0.7');
 END;
 GO
 
@@ -356,7 +356,7 @@ IF NOT EXISTS (
 )
 BEGIN
     INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-    VALUES (N'20240708132423_newUpdates', N'8.0.6');
+    VALUES (N'20240708132423_newUpdates', N'8.0.7');
 END;
 GO
 
@@ -387,7 +387,7 @@ IF NOT EXISTS (
 )
 BEGIN
     INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-    VALUES (N'20240809160050_Migrationseven', N'8.0.6');
+    VALUES (N'20240809160050_Migrationseven', N'8.0.7');
 END;
 GO
 

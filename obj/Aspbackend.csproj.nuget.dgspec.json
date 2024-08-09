@@ -56,7 +56,7 @@
             },
             "DotNetEnv": {
               "target": "Package",
-              "version": "[3.0.0, )"
+              "version": "[3.1.0, )"
             },
             "FluentEmail.Mailgun": {
               "target": "Package",
@@ -68,41 +68,61 @@
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[8.0.6, )"
+              "version": "[8.0.7, )"
+            },
+            "Microsoft.AspNetCore.Authentication.OpenIdConnect": {
+              "target": "Package",
+              "version": "[8.0.7, )"
             },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
-              "version": "[8.0.6, )"
+              "version": "[8.0.7, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.6, )"
+              "version": "[8.0.7, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[8.0.6, )"
+              "version": "[8.0.7, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.6, )"
+              "version": "[8.0.7, )"
+            },
+            "Microsoft.Identity.Web": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "Microsoft.Identity.Web.UI": {
+              "target": "Package",
+              "version": "[3.0.1, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[8.0.2, )"
+              "version": "[8.0.3, )"
             },
             "RestSharp": {
               "target": "Package",
-              "version": "[111.3.0, )"
+              "version": "[111.4.1, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.6.2, )"
+              "version": "[6.7.0, )"
             },
             "Swashbuckle.AspNetCore.Swagger": {
               "target": "Package",
-              "version": "[6.6.2, )"
+              "version": "[6.7.0, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[6.7.0, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerUI": {
+              "target": "Package",
+              "version": "[6.7.0, )"
             },
             "System.Data.SqlClient": {
               "target": "Package",
@@ -110,7 +130,7 @@
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
-              "version": "[7.6.2, )"
+              "version": "[8.0.1, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",
